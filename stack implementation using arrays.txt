@@ -9,7 +9,7 @@ public class Demostack{
     }
     void push(int item){
       if(tos==n-1){
-        System.out.println("stack is full");
+        System.out.println("Stack is Full");
       }
       else{
         tos++;
@@ -19,7 +19,7 @@ public class Demostack{
     }
     void pop(){
         if(tos==-1){
-            System.out.println("stack is empty");
+            System.out.println("Stack is Empty");
         }
         else{
             System.out.println(stack[tos] +" poped from stack");
@@ -28,18 +28,18 @@ public class Demostack{
     }
     void peek(){
         if(tos==-1){
-            System.out.println("stack is empty");
+            System.out.println("Stack is Empty");
         }
         else{
-            System.out.println("T2op element is : " + stack[tos]);
+            System.out.println("Top Element is : " + stack[tos]);
         }
     }
     void display(){
           if(tos==-1){
-            System.out.println("stack is empty");
+            System.out.println("Stack is Empty");
         }
     else{
-        System.out.println("stack elements : ");
+        System.out.println("Stack Elements : ");
         for(int i=tos;i>=0;i--){
             System.out.println(stack[i]);
         }
@@ -52,17 +52,17 @@ public class Demostack{
      Demostack s=new Demostack();
      int choice,item;
      do{
-        System.out.println("operations in the stack: ");
-        System.out.println("1.push");
-        System.out.println("2.pop");
-        System.out.println("3.peek");
-        System.out.println("4.display");
-        System.out.println("5.exit");
+        System.out.println("Stack operations : ");
+        System.out.println("1.Push");
+        System.out.println("2.Pop");
+        System.out.println("3.Peek");
+        System.out.println("4.Display");
+        System.out.println("5.Exit");
         System.out.println("Enter your choice:");
         choice=sc.nextInt();
      switch(choice){
         case 1:
-            System.out.println("enter value to push: ");
+            System.out.println("Enter value to push: ");
             item=sc.nextInt();
             s.push(item);
             break;
@@ -76,10 +76,10 @@ public class Demostack{
             s.display();
             break;
         case 5:
-            System.out.println("exiting...");
+            System.out.println("Exiting...");
             break;
         default:
-            System.out.println("invalid choice");
+            System.out.println("Invalid choice");
      }
      }
      while(choice != 5);
